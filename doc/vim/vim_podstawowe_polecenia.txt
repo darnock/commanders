@@ -1,0 +1,8 @@
+Po uruchomieniu vim'a jesteśmy w trybie poleceń
+aby edytować ten otwarty plik to wciskamy 'i' i teraz jesteśmy w trybie edycji,
+gdy juz dokonamy komentarza naciskamy ESC i powracamy do trybu poleceń
+naciskamy ':w' i enter to plik sie zapisuje
+naciskamy ':q' i enter to wychodzimy z edytora
+można od razu wpisać ':wq' + enter wtedy zapisuje i wychodzi z edytora
+
+

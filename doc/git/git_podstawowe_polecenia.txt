@@ -1,0 +1,38 @@
+//-----------------------------------------------------------------------------
+//Jak jest się w folderze z repozytorium i chcemy stworzyć tam
+//plik plik.txt to wykonujemy po kolei i dodać do repozytorium to:
+
+git pull        // pobieramy najnowszą wersję z serwera,
+                // co byśmy działali na najnowszych plikach
+touch plik.txt  // tworzymy plik, potem go edytujemy itp
+git add .       // dodaje wszystkie nowe pliki do repozytorium lokalnego
+git commit      // commitujemy zamiany (zatwierdzamy je) wyskoczy edytor
+                // wpisujemy co zmieniliśmy.
+	        // (będzie to edytor konsolowy edytor vim,
+		// patrz sam koniec pliku)
+git push        // wysyłamy zmiany na serwer, proste nie :P
+//-----------------------------------------------------------------------------
+
+git rm do_skasowania.cpp 
+//kasujemy plik z repozytorium (powinno się tego używać zamiast rm)
+
+git mv nazwa1.txt nazwa2.txt 
+// zmiana nazwy z nazwa1.txt na nazwa2.txt (powinno się tego używać zamiast mv)
+
+git mv katalog1/plik1.txt katalog2/ 
+//przenoszenie plik1.txt z folderu katalog1 do folderu katalog2
+
+//----------------------------------------------------------------------------
+
+git log
+// pokazuje log commit'ów
+
+git log -p
+// pokazuje szczegółowy log commit'ów 
+
+//-----------------------------------------------------------------------------
+//wykonujemy tylko raz, służą do podpisania się 
+git config --global user.email Jan.Kowalski@onet.pl
+git config --global user.name "Jank Kowalski"
+
+

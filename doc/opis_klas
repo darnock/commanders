@@ -1,0 +1,14 @@
+klasa czlowieki: podstawowa klasa ludzi. Odpwowiednie jednostki będą dalej tworzone przez dziedziczenie tej podstawowej klasy.
+pola:           x,y - położenie ludzia
+                oldcolor - pole służy do zapamiętania tła na jakim stał człowieczek (w celu jego odrysowania po ruchu człowieka) 
+                color - wiadomo;
+metody:         
+                hide() - chowa czlowieczka i odtwarza tlo na ktorym stal
+                show() - pokazuje czlowieczka w miejscu x,y
+                move(direction dir) - przesowa czlowieczka o 1 pole w jego otoczenie N,S,W,E i skosy.
+
+klasa szeregowy: podstawowa klasa bojowa :D
+pola:           shield - daje kamizelke kuloodporna ktora najpierw jest "zuzywana" a dopiero po niej energia
+                speed - modyfikator szybkosci poruszania jednostki 
+                hp - punkty zycia
+                

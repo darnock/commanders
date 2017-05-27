@@ -1,0 +1,22 @@
+1. Pobieramy 
+  http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git
+2. Podczas instalacji wybieramy windows explorer integration, tam git Bash Here
+    oraz Git GUI Here, resztę według domyślnych ustawień 
+3. Odpalamy Git Bash Here z PPM (prawego przycisku myszki)
+4. W terminalu wykonujesz polecenie "ssh-keygen.exe -t dsa"
+5. Nie zmieniamy domyślnych ustawień dla folderu zapisu kluczy
+6. Enter passphrase - dla wygody, nie wpisujemy nic
+7. Teraz wystarczy przesłać mi klucz publiczny jest to plik 
+   "c:\Users\Jan Kowalski\.shh\id_dsa.pub" 
+   ten drugi jest prywatnym kluczem i nikomu go nie wysyłamy
+8. Czekamy aż dodam użytkownika
+9. Potem przenosimy się w miejsce gdzie chcemy mieć repozytorium np
+   "c:" odpalamy Git Bash  Here z PPM
+10. Wykonujemy dwa polecenia 
+    "git config --global user.email Jan.Kowalski@onet.pl"
+11. Oraz "git config --global user.name Jan.Kowalski"
+    jeżeli ma być ze spacja to używamy cudzysłowów
+    git config --global user.name "Jank Kowalski"
+12. Wykonujemy polecenie "git clone git@ciacho.no-ip.org:misa"
+    i teraz mamy cale repozytorium misa w folderze "c:\misa"
+13. Reszta dotyczy obsługi git'a oraz edytora vim

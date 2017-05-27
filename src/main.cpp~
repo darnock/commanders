@@ -1,0 +1,100 @@
+#include <iostream>
+#include <SDL2/SDL.h>
+#include <cstdlib>
+#include <ctime> 
+#include "include/units.h"
+
+#define XRES 800
+#define YRES 600 
+#define ILEOBJ 40000 //testing purposes only
+
+    Uint32 * pixels = new Uint32[XRES * YRES];
+
+szeregowy zolnierze[ILEOBJ]; //deklaracja ILEOBJ ludzi
+
+int main(int argc, char ** argv)
+{
+    bool leftMouseButtonDown = false;
+    bool quit = false;
+    int hlp;
+    direction dir;
+
+    srand( time( NULL ) );
+
+    SDL_Event event;
+
+    SDL_Init(SDL_INIT_VIDEO);
+
+    SDL_Window * window = SDL_CreateWindow("MISA v0.1b",
+        SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, XRES, YRES, 0);
+
+    SDL_Renderer * renderer = SDL_CreateRenderer(window, -1, 0);
+    SDL_Texture * texture = SDL_CreateTexture(renderer,
+        SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STATIC, XRES, YRES);
+    memset(pixels, 0, XRES * YRES * sizeof(Uint32));
+
+    for(int x=0; x<ILEOBJ; x++) zolnierze[x].init(rand()%(XRES-1),rand()%(YRES-1),0x00ff00);         
+
+    while (!quit)
+    {
+        SDL_UpdateTexture(texture, NULL, pixels, XRES * sizeof(Uint32));
+	
+			
+	for(int x=0; x<ILEOBJ; x++) 
+		{
+		hlp=rand()%8; 
+		if(hlp==0) dir=dup;		
+		if(hlp==1) dir=ddown;		
+		if(hlp==2) dir=dleft;		
+		if(hlp==3) dir=dright;		
+		if(hlp==4) dir=dupleft;		
+		if(hlp==5) dir=dupright;		
+		if(hlp==6) dir=ddownleft;		
+		if(hlp==7) dir=ddownright;		
+
+		szeregowy[x].move(dir);
+		}
+	//for (int y=0; y<=YRES-1; y++)
+	//for (int x=0; x<=XRES-1; x++) 
+//		pixels[y*XRES+x]=rand() *1000;
+ 	//SDL_Delay(10);
+
+ 	while(SDL_PollEvent(&event) > 0)
+		{ 
+		//SDL_WaitEvent(&event);
+	 
+		switch (event.type)
+		{
+		case SDL_MOUSEBUTTONUP:
+		    if (event.button.button == SDL_BUTTON_LEFT)
+		        leftMouseButtonDown = false;
+		    break;
+		case SDL_MOUSEBUTTONDOWN:
+		    if (event.button.button == SDL_BUTTON_LEFT)
+		        leftMouseButtonDown = true;
+		case SDL_MOUSEMOTION:
+		    if (leftMouseButtonDown)
+		    {
+		        int mouseX = event.motion.x;
+		        int mouseY = event.motion.y;
+		        pixels[mouseY * XRES + mouseX] = 0xffffffff;
+		    }
+		    break;
+		case SDL_QUIT:
+		    quit = true;
+		    break;
+		}
+	}
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_RenderPresent(renderer);
+    }
+
+    delete[] pixels;
+    SDL_DestroyTexture(texture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+
+    return 0;
+}

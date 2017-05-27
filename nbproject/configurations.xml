@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="80">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df name="misa" root=".">
+      <df name="backup">
+      </df>
+      <df name="build">
+      </df>
+      <df name="data">
+        <df name="fonts">
+        </df>
+      </df>
+      <df name="doc">
+        <df name="git">
+        </df>
+        <df name="vim">
+        </df>
+      </df>
+      <df name="src">
+        <df name="include">
+          <in>game.h</in>
+          <in>game_settings.h</in>
+          <in>main.h</in>
+          <in>sign.h</in>
+          <in>text.h</in>
+          <in>text_mode.h</in>
+          <in>units.h</in>
+        </df>
+        <df name="mod_debug">
+          <in>debug.cpp</in>
+          <in>debug.h</in>
+        </df>
+        <df name="mod_settings">
+          <in>class_attribute.cpp</in>
+          <in>class_attribute.h</in>
+          <in>class_save_file.cpp</in>
+          <in>class_save_file.h</in>
+          <in>settings.cpp</in>
+          <in>settings.h</in>
+        </df>
+        <in>game.cpp</in>
+        <in>main.cpp</in>
+        <in>sign.cpp</in>
+        <in>text.cpp</in>
+        <in>text_mode.cpp</in>
+        <in>units.cpp</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/main.out</executablePath>
+          <ccTool>
+            <incDir>
+              <pElem>.</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+      </makefileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

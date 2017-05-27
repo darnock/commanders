@@ -1,0 +1,34 @@
+BUILD_DIR=build/
+SRC_DIR=src/
+CPP=g++ 
+CPP_FLAGS= -Wall --pedantic 
+CPP_FLAGS_SDL= -lSDL2 
+OUTPUT= -o $(BUILD_DIR)
+
+# wywołuje się za pomocą make
+all: clean mkdir units.o main.o text_mode.o main.out mklink;
+
+# tworzy odpowiedni folder do wrzucania skompilowanego pliku
+mkdir:
+	mkdir $(BUILD_DIR)
+
+# kompiluje plik i wrzuca plik wykonywalny do odpowiedniego folderu
+units.o:
+	$(CPP) $(CPP_FLAGS) -c $(SRC_DIR)units.cpp $(OUTPUT)units.o 
+
+main.o:
+	$(CPP) $(CPP_FLAGS) -c $(SRC_DIR)main.cpp $(OUTPUT)main.o $(CPP_FLAGS_SDL)
+text_mode.o:
+	$(CPP) $(CPP_FLAGS) -c $(SRC_DIR)text_mode.cpp $(OUTPUT)text_mode.o -lncurses
+#łączymy wszystko w jeden plik
+main.out:
+	$(CPP) $(OUTPUT)main.out $(BUILD_DIR)/units.o $(BUILD_DIR)/main.o $(BUILD_DIR)/text_mode.o $(CPP_FLAGS_SDL) -lncurses
+
+#tworzy symboliczny link do binarki co by nie wpisywać folderu za każdym razem
+mklink:
+	ln -s $(BUILD_DIR)main.out
+# czyści poprzedni build
+clean:
+	rm -rfv $(BUILD_DIR)
+	#usuwamy link symboliczny
+	rm -rfv main.out
