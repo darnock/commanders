@@ -1,0 +1,22 @@
+******************************** ZARYS I PODSTAWOWE ZAŁOŻENIA **************************************
+1. Gracz dowodzi 'królem' (Higgs?) który posiada ograniczoną liczbę gońców (fotonów?).
+2. Informacja o kolejnym ruchu dowolnej jednostki (oprócz króla) jest rozpowrzechniana ze skończoną prędkością 
+3. Szeregowi (elektrony?) poruszają się w systemie 2D (po grafenie?). 
+4. Przeszkody (bariery potencjału, studnie potencjału, defekty punktowe, dyslokacje itp.) utrudniają (spowalniają, uniemożliwiają) ruch jednostek.
+5. Istnieje system hierarchii dowodzenia: Król -> Generał -> Pułkownik -> Oficer -> Szeregowy
+6. Zadaniem gracza jest wykonywanie poszczególnych misji. 
+7. Misje dzielą się na szturmowe i obronne
+8. Wszystko jest osadzone w świecie cząstek atomowych, tj. dostepne jednostki to:
+    Atom (neutralny), jon (dodatni, ujemny), elektron, foton, pozyton (lepiej nie dotykać antymaterii), neutron (element tworzacy bariery)  
+
+
+******************************* POMYSŁY LUŹNE ******************************************************
+1. Armia atomów boru zlokalizowana w środku reakcji łańcuchowej musi manewrować tak, aby wygasić reakcję. 
+2. Elektron nie może przejść przez barierę potencjału. 
+3. Elektron nie może wyjść ze studni potencjału.
+4. Misja zlokalizowana w środku LHC :P
+5. Elektrony mają spin, więc mogą się 'kręcić'. 
+6. Wszystkie jednostki mają energię całkowitą /kinetyczna + potencjalna/
+7. Cząstki drgają? Również ściany i podłoże? Wszytko drga. 
+8.  jednostki (elektrony) poruszają się wolniej w np krzemie niż w miedzi (różnicowanie podłoża)
+9. ???
