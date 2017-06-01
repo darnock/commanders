@@ -57,8 +57,10 @@ $(BUILD_DIR)text.o: $(SRC_DIR)text.cpp $(SRC_DIR)include/text.h
 $(BUILD_DIR)sign.o: $(SRC_DIR)sign.cpp $(SRC_DIR)include/sign.h
 	$(CPP) $(CPP_FLAGS) -c $(SRC_DIR)$(*F).cpp $(OUTPUT)$(@F)
 
-main.out: $(BUILD_DIR)sign.o $(BUILD_DIR)text.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)text_mode.o $(BUILD_DIR)class_save_file.o $(BUILD_DIR)game.o
-	$(CPP) $(OUTPUT)main.out $(BUILD_DIR)sign.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)text_mode.o $(BUILD_DIR)text.o $(BUILD_DIR)game.o $(CPP_FLAGS_SDL) $(CPP_FLAGS_NCURSES)
+#main.out: $(BUILD_DIR)sign.o $(BUILD_DIR)text.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)text_mode.o $(BUILD_DIR)class_save_file.o $(BUILD_DIR)game.o
+main.out: $(BUILD_DIR)sign.o $(BUILD_DIR)text.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)class_save_file.o $(BUILD_DIR)game.o
+#	$(CPP) $(OUTPUT)main.out $(BUILD_DIR)sign.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)text_mode.o $(BUILD_DIR)text.o $(BUILD_DIR)game.o $(CPP_FLAGS_SDL) $(CPP_FLAGS_NCURSES)
+	$(CPP) $(OUTPUT)main.out $(BUILD_DIR)sign.o $(BUILD_DIR)units.o $(BUILD_DIR)main.o $(BUILD_DIR)text.o $(BUILD_DIR)game.o $(CPP_FLAGS_SDL) $(CPP_FLAGS_NCURSES)
 	cp -rfv $(BUILD_DIR)main.out main.exe
 
 settings.out: $(BUILD_DIR)debug.o $(BUILD_DIR)class_attribute.o $(BUILD_DIR)class_save_file.o $(BUILD_DIR)settings.o
